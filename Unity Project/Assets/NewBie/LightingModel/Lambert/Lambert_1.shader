@@ -31,7 +31,7 @@ Shader "Tut/NewBie/Lambert_1" {
 			o.normal=v.normal;
 			return o;
 		}
-		float4 frag(v2f i):COLOR
+		float4 frag(v2f i):SV_Target
 		{
 			i.lightDir=normalize(i.lightDir);
 			i.normal=normalize(i.normal);

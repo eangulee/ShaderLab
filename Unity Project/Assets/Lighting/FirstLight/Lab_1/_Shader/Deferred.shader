@@ -3,7 +3,7 @@ Shader "Tut/Lighting/FirstLight/Lab_1/Deferred" {
 		_tintVertex("Color of Vertex Lightmode",Color) = (1,0,0,1)
 		_tintForward("Color of Forward Lightmode",Color) = (0,1,0,1)
 		_tintDeferred("Color of Deferred Lightmode",Color) = (0,0,1,1)
-			_dilateVertex("falte amount of Object",range(1,3))=1
+		_dilateVertex("falte amount of Object",range(1,3))=1
 		_dilateForward("falte amount of Object",range(1,3)) = 1.2
 		_dilateDeferred("falte amount of Object",range(1,3)) = 1.4
 	}
