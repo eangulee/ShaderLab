@@ -32,8 +32,9 @@ Shader "Tut/Shadow/PlanarShadow_1" {
                 vt.y=0;
                 //vt=mul(vt,_World2Ground);//back to world
                 vt=mul(_Ground2World,vt);
-                vt=mul(unity_WorldToObject,vt);
-                return UnityObjectToClipPos(vt);
+                // vt=mul(unity_WorldToObject,vt);
+                // return UnityObjectToClipPos(vt);
+                return mul(UNITY_MATRIX_VP,vt);
             }
 
             float4 frag(void) : COLOR 

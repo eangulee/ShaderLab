@@ -41,7 +41,8 @@ Shader "Tut/Shadow/PlanarShadow_3" {
 			vt=mul(_Ground2World,vt);//back to world
 			vt=mul(unity_WorldToObject,vt);
 			o.pos=UnityObjectToClipPos(vt);
-			o.atten=distance(vertex,vt)/_Intensity;
+			// o.pos = mul(UNITY_MATRIX_MVP,vt);
+			o.atten = distance(vertex,vt)/_Intensity;
 			return o;
 		}
  		float4 frag(v2f i) : COLOR 
@@ -80,7 +81,8 @@ Shader "Tut/Shadow/PlanarShadow_3" {
 			vt=mul(_Ground2World,vt);//back to world
 			vt=mul(unity_WorldToObject,vt);
 			o.pos= UnityObjectToClipPos(vt);
-			o.atten=distance(vertex,vt)/_Intensity;
+			// o.pos = mul(UNITY_MATRIX_VP,vt);
+			o.atten = distance(vertex,vt)/_Intensity;
 			return o;
 		}
  		float4 frag(v2f i) : COLOR 

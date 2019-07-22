@@ -35,13 +35,14 @@ Shader "Tut/Shadow/PlanarShadow_2" {
                 //vt.z=vt.z-(vt.y/litDir.y)*litDir.z;
                 vt.y=0;
                 vt=mul(_Ground2World,vt);//back to world
-                vt=mul(unity_WorldToObject,vt);
-                return UnityObjectToClipPos(vt);
+                // vt=mul(unity_WorldToObject,vt);
+                // return UnityObjectToClipPos(vt);
+                return mul(UNITY_MATRIX_VP,vt);
             }
 
             float4 frag(void) : COLOR
             {
-                return float4(0.6,0,0,1);
+                return float4(0.3,0.3,0.3,1);
             }
 
             ENDCG
@@ -69,8 +70,9 @@ Shader "Tut/Shadow/PlanarShadow_2" {
                 vt.xz=vt.xz-(vt.y/litDir.y)*litDir.xz;
                 vt.y=0;
                 vt=mul(_Ground2World,vt);//back to world
-                vt=mul(unity_WorldToObject,vt);
-                return UnityObjectToClipPos(vt);
+                // vt=mul(unity_WorldToObject,vt);
+                // return UnityObjectToClipPos(vt);
+                return mul(UNITY_MATRIX_VP,vt);
             }
 
             float4 frag(void) : COLOR
