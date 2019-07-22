@@ -25,7 +25,7 @@ Shader "Tut/Lighting/Forward/Lab_0/ShadeFwdAddZero" {
 				o.wldNormal = UnityObjectToWorldNormal(v.normal);
 				return o;
 			}
-			float4 frag(vertOut i) :COLOR
+			float4 frag(vertOut i) :SV_Target
 			{
 				float  diff = max(0, dot(normalize(i.wldNormal),i.wldLight));
 				float3 lit = _LightColor0*diff;

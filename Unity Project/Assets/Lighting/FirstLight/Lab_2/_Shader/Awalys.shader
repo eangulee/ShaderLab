@@ -1,6 +1,6 @@
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Tut/Lighting/FirstLight/Lab_1/Always" {
+Shader "Tut/Lighting/FirstLight/Lab_2/Always" {
 	Properties{
 		_tintAlways("Color of Always", Color) = (1, 0, 0, 1)
 		_tintForward("Color of Forward", Color) = (0, 1, 0, 1)

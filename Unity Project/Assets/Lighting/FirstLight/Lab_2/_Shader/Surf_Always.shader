@@ -1,4 +1,4 @@
-﻿Shader "Tut/Lighting/Surf_Always" {
+﻿Shader "Tut/Lighting/FirstLight/Lab_2/Surf_Always" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}

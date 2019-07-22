@@ -36,7 +36,7 @@ Shader "Tut/Lighting/Forward/Lab_1/ShadeFwdBase" {
 		float4 frag(vertOut i):COLOR
 		{
 			float  diff = max(0, dot(normalize(i.wldNormal),i.wldLight));
-			float3 lit = _LightColor0*diff + i.pointLit;
+			float3 lit = _LightColor0 * diff + i.pointLit;
 			return float4(lit,1);
 		}
 		ENDCG
